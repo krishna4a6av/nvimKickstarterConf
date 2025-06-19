@@ -1,4 +1,4 @@
-Came from kickstarter:- 
+Came from kickstarter:- https://github.com/nvim-lua/kickstart.nvim
 
 External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
