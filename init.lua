@@ -156,8 +156,12 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  --few themes i added
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   'rebelot/kanagawa.nvim',
+  { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'EdenEast/nightfox.nvim', name = 'nightfox' },
+  { 'ellisonleao/gruvbox.nvim', name = 'gruvbox' },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -828,7 +832,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      --vim.cmd.colorscheme 'everforest'
     end,
   },
 
@@ -945,6 +949,17 @@ require('lazy').setup({
     },
   },
 })
+
+-- Load theme from script for dynamic theming
+local theme_file = vim.fn.stdpath 'config' .. '/theme-switcher/current_theme.txt'
+local file = io.open(theme_file, 'r')
+if file then
+  local theme = file:read '*line'
+  file:close()
+  if theme and theme ~= '' then
+    vim.cmd.colorscheme(theme)
+  end
+end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
