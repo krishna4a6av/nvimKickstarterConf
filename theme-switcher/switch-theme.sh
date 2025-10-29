@@ -8,10 +8,14 @@ THEME_FILE="${SCRIPT_DIR}/current_theme.txt"
 # Theme mappings: slug -> colorscheme command
 declare -A THEMES=(
     ["Catppuccin"]="catppuccin"
+    ["Autmn"]="OceanicNext"
     ["Everforest"]="everforest"
     ["Nightfox"]="nightfox"
     ["Gruvbox"]="gruvbox"
+    ["Graphite"]="flexoki"
+    ["Crimson"]="sakura"
     ["Kanagawa"]="kanagawa"
+    ["Oxocarbon"]="oxocarbon"
     ["Rosepine"]="rose-pine-moon"
     ["Tokyo-night"]="tokyonight-night"
 )

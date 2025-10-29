@@ -162,6 +162,15 @@ require('lazy').setup({
   { 'rose-pine/neovim', name = 'rose-pine' },
   { 'EdenEast/nightfox.nvim', name = 'nightfox' },
   { 'ellisonleao/gruvbox.nvim', name = 'gruvbox' },
+  { 'vague-theme/vague.nvim', name = 'vague' },
+  { 'kepano/flexoki-neovim', name = 'flexoki' },
+  { 'nyoom-engineering/oxocarbon.nvim', name = 'oxocarbon' },
+  { 'mhartington/oceanic-next', name = 'oceanic-next' },
+  {
+    'anAcc22/sakura.nvim',
+    name = 'sakura',
+    dependencies = 'rktjmp/lush.nvim',
+  },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
